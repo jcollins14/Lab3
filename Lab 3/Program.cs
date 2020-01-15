@@ -8,25 +8,35 @@ namespace Lab_3
 
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your number?");
-            string input = Console.ReadLine();
-            int guess = int.Parse(input);
+            Console.WriteLine("Hello! What is your name?");
+            string name = Console.ReadLine();
+            int guess = 0;
+            string output = "";
 
+            if (guess < 1 || guess > 100)
+            {
+                Console.WriteLine("What is your number? Please choose between 1 and 100");
+                string input = Console.ReadLine();
+                guess = int.Parse(input);
+                output = "";
+            }
             if (guess % 2 != 0){
-                Console.WriteLine(guess + " Odd.");
+                output = guess.ToString() + " odd.";
             }
             else if (guess % 2 == 0 && guess >= 2 && guess <= 25)
             {
-                Console.WriteLine("Even and less than 25.");
+                output = "even and less than 25.";
             }
             else if (guess % 2 == 0 && guess >= 26 && guess <= 60)
             {
-                Console.WriteLine("Even.");
+                output = guess.ToString() + " and even.";
             }
             else if (guess % 2 == 0 && guess > 60)
             {
-                Console.WriteLine(guess + " Even.");
+                output = "even.";
             }
+
+            Console.WriteLine(name + ", Your number is " + output);
         }
     }
 }
