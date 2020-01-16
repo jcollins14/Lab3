@@ -13,13 +13,14 @@ namespace Lab_3
             int guess = 0;
             string output = "";
 
-            if (guess < 1 || guess > 100)
+            while (guess < 1 || guess > 100)
             {
                 Console.WriteLine("What is your number? Please choose between 1 and 100");
                 string input = Console.ReadLine();
                 guess = int.Parse(input);
                 output = "";
             }
+
             if (guess % 2 != 0){
                 output = guess.ToString() + " odd.";
             }
