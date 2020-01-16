@@ -8,20 +8,18 @@ namespace Lab_3
         {
             Console.WriteLine("Hello! What is your name?");
             string name = Console.ReadLine();
-            int guess = 0;
-            string output = "";
+            int guess;
+            string output;
 
             Console.WriteLine("What is your number? Please choose between 1 and 100.");
             string input = Console.ReadLine();
             guess = int.Parse(input);
-            output = "";
 
             while (guess < 1 || guess > 100)
             {
                 Console.WriteLine("Please input a valid number. Please choose between 1 and 100.");
                 input = Console.ReadLine();
                 guess = int.Parse(input);
-                output = "";
             }
 
             if (guess % 2 == 0 && guess >= 2 && guess <= 25)
